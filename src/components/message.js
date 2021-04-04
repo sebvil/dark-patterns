@@ -3,7 +3,7 @@ import React from 'react';
 
 
 export default function Message(props) {
-    const {is_received, sender, senderInitials} = props;
+    const {is_received, sender, senderInitials, messengerColor} = props;
     const styles = {
         root: {
             display: "flex",
@@ -15,7 +15,7 @@ export default function Message(props) {
           borderRadius: "50%",
           height: "2.5em",
           width: "2.5em",
-          background: "blue",
+          background: messengerColor,
           fontSize: "1em",
           display: "flex",
           justifyContent: "center",
@@ -31,10 +31,10 @@ export default function Message(props) {
             paddingLeft: "8px",
         },
         received: {
-            background: "blue",
+            background: messengerColor,
         },
         sent: {
-            background: "green",
+            background: "#565f6e",
         }
     };
 
