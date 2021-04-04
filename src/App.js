@@ -47,7 +47,7 @@ function App() {
 
       </div>
     )
-  } else if (page == 1) {
+  } else if (page == 0) {
     return (
       <div className="App">
         <Page1 handleNextDisabledChange={handleNextDisabledChange}
@@ -56,7 +56,7 @@ function App() {
         />
       </div>
     );
-  } else if (page == 1) {
+  }  else if (page == 1) {
     return (
       <div className="App">
         <Page1 handleNextDisabledChange={handleNextDisabledChange}
@@ -76,7 +76,14 @@ function App() {
         />
       </div>
     );
-  }
+  }  else if (page == 4) {
+    return (
+      <div className="App">
+        <Page5/>
+        <button onClick={handleNextPressed}>Next</button>
+      </div>
+    );
+  } 
 
   
 }
