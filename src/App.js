@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Page1 from './pages/page1';
+import Page6 from './pages/page6';
+import Page5 from './pages/page5';
+import Page8a from './pages/page8a';
+import Page8b from './pages/page8b';
 import { useState } from 'react';
 
 function App() {
