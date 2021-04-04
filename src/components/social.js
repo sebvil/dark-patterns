@@ -16,7 +16,9 @@ export default function Social(props) {
     return (
         <Phone>
             <div style={styles.root}>
-                <Header color="blue"></Header>
+                <Header color="blue">
+                    TweetBook
+                </Header>
                 <div>
                     {props.children}
                 </div>

@@ -8,12 +8,11 @@ function Header({ color, children }) {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'baseline',
-      padding: '1em',
       height: "50px",
       backgroundColor: color,
       color: '#fff',
     }}>
-      <h1>{children}</h1>
+      <h1 style={{margin: "0"}}>{children}</h1>
     </div>
   )
 }
