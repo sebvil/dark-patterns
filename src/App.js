@@ -12,6 +12,7 @@ function App() {
   const [messenger, setMessenger] = useState("social media");
   const [madePurchase, setMadePurchase] = useState(false);
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
+  // i changed this
   const [page, setPage] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(true);
   const [status, setStatus] = useState("");
@@ -50,6 +51,7 @@ function App() {
 
       </div>
     )
+
   } else if (page == 1) {
     return (
       <div className="App">
