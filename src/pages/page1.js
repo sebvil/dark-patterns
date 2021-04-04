@@ -32,7 +32,15 @@ export default function Page1(props) {
     const onClickBuyNow = () => {
         props.handleMadePurchaseChange();
         props.handleNextDisabledChange()
+        props.setStatus("You decided to buy the laptop!");
     }
+
+    const onClickPass = () => {
+        props.handleNextDisabledChange()
+        props.setStatus("You decided not to buy the laptop!");
+
+    }
+
     
     return (
         <Page description="test">
@@ -44,7 +52,7 @@ export default function Page1(props) {
                     alt="laptop"
                     price={price()}
                     onClickBuyNow={onClickBuyNow}
-                    onClickPass={props.handleNextDisabledChange}/>
+                    onClickPass={onClickPass}/>
             </Store>
         </Page>
     )
