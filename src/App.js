@@ -19,6 +19,10 @@ function App() {
     setNextDisabled(false);
   }
 
+  const handleMadePurchaseChange = () => {
+    setMadePurchase(!madePurchase);
+  }
+
   return (
     <div className="App">
       <Page1 handleNextChange={handleNextDisabledChange}/>
