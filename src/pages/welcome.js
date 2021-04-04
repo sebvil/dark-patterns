@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './header';
+import Header from '../components/header';
 import Store from '../components/store';
 import Social from '../components/social';
 import Message from "../components/message";
@@ -29,7 +29,7 @@ export default function Welcome(props) {
                 </div>
                 <button 
                 style={styles.bigButton}
-                onClick={props.StartGame}
+                onClick={props.startGame}
             > Start Game
             </button>
 

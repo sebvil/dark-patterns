@@ -6,13 +6,13 @@ import Page6 from './pages/page6';
 import Page5 from './pages/page5';
 import Page8a from './pages/page8a';
 import Page8b from './pages/page8b';
+import Welcome from './pages/welcome';
 import { useState } from 'react';
 
 function App() {
   const [messenger, setMessenger] = useState("social media");
   const [madePurchase, setMadePurchase] = useState(false);
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
-  // i changed this
   const [page, setPage] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(true);
   const [status, setStatus] = useState("");
@@ -51,18 +51,11 @@ function App() {
 
       </div>
     )
-<<<<<<< HEAD
-  } else if (page == 0) {
-=======
 
-  } else if (page == 1) {
->>>>>>> da46b969d7ec98a31463aab7dad2848d4fa6234e
+  } else if (page == 0) {
     return (
       <div className="App">
-        <Page1 handleNextDisabledChange={handleNextDisabledChange}
-          handleMadePurchaseChange={handleMadePurchaseChange}
-          setStatus={setStatus}
-        />
+        <Welcome startGame={handleNextPressed}/>
       </div>
     );
   }  else if (page == 1) {
@@ -85,7 +78,14 @@ function App() {
         />
       </div>
     );
-  }  else if (page == 4) {
+  } else if (page == 3) {
+    return (
+      <div className="App">
+        <Page5/>
+        <button onClick={handleNextPressed}>Next</button>
+      </div>
+    );
+  }   else if (page == 4) {
     return (
       <div className="App">
         <Page5/>
