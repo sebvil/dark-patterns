@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Page1 from './pages/page1';
+import { useState } from 'react';
 
 function App() {
+  const [messenger, setMessenger] = useState("social media");
+  const [madePurchase, setMadePurchase] = useState(false);
+  const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
+  const [page, setPage] = useState(1);
+  const [nextDisabled, setNextDisabled] = useState(false);
+
+  const handleNextPressed = () => {
+    setPage(page + 1);
+    setNextDisabled(true);
+  }
+
+  const handleNextDisabledChange = () => {
+    setNextDisabled(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Page1 handleNextChange={handleNextDisabledChange}/>
+      <button onClick={handleNextPressed} disabled={nextDisabled}>Next</button>
     </div>
   );
 }
