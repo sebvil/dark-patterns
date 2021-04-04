@@ -50,7 +50,7 @@ export default function Message(props) {
         )
     } else {
         return (
-            <div style={styles.root}>
+            <div style={{...styles.root, alignSelf: 'flex-end'}}>
                 <div style={{...styles.sent, ...styles.message}}>
                     <p style={styles.sender}>{sender}</p>
                     {props.children}

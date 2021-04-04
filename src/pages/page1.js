@@ -10,12 +10,14 @@ export default function Page1(props) {
             </p>
             <Store>
                 This is the store content.
+                <div style={{display: "flex", flexDirection: "column"}}>
                 <Message sender={"Marco Anaya"} senderInitials={"MA"} is_received>
                     <p>hello friend</p>
                 </Message>
                 <Message>
                     <p>Oh hi</p>
                 </Message>
+                </div>
             </Store>
         </div>
     )
