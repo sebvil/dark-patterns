@@ -23,6 +23,10 @@ function App() {
     setMadePurchase(!madePurchase);
   }
 
+  const handleMadeInfluencerPurchaseChange = () => {
+    setMadePurchase(!madeInfluencerPurchase);
+  }
+
   return (
     <div className="App">
       <Page1 handleNextChange={handleNextDisabledChange}/>
