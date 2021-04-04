@@ -51,8 +51,12 @@ function App() {
 
       </div>
     )
+<<<<<<< HEAD
+  } else if (page == 0) {
+=======
 
   } else if (page == 1) {
+>>>>>>> da46b969d7ec98a31463aab7dad2848d4fa6234e
     return (
       <div className="App">
         <Page1 handleNextDisabledChange={handleNextDisabledChange}
@@ -61,7 +65,7 @@ function App() {
         />
       </div>
     );
-  } else if (page == 1) {
+  }  else if (page == 1) {
     return (
       <div className="App">
         <Page1 handleNextDisabledChange={handleNextDisabledChange}
@@ -81,7 +85,14 @@ function App() {
         />
       </div>
     );
-  }
+  }  else if (page == 4) {
+    return (
+      <div className="App">
+        <Page5/>
+        <button onClick={handleNextPressed}>Next</button>
+      </div>
+    );
+  } 
 
   
 }
