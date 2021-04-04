@@ -2,12 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import Page1 from './pages/page1';
 import { useState } from 'react';
+import Page4 from './pages/page4';
 
 function App() {
   const [messenger, setMessenger] = useState("social media");
   const [madePurchase, setMadePurchase] = useState(false);
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(4);
   const [nextDisabled, setNextDisabled] = useState(true);
   const [status, setStatus] = useState("");
 
@@ -51,6 +52,15 @@ function App() {
         />
       </div>
     );
+  } else if (page == 4) {
+    return (
+      <div className="App">
+        <Page4 handleNextDisabledChange={handleNextDisabledChange}
+          setStatus={setStatus}
+          messenger={messenger}
+        />
+      </div>
+    )
   }
 
   
