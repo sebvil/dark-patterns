@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Page1 from './pages/page1';
+import Page2 from './pages/page2';
 import { useState } from 'react';
 
 function App() {
@@ -47,6 +48,26 @@ function App() {
       <div className="App">
         <Page1 handleNextDisabledChange={handleNextDisabledChange}
           handleMadePurchaseChange={handleMadePurchaseChange}
+          setStatus={setStatus}
+        />
+      </div>
+    );
+  } else if (page == 1) {
+    return (
+      <div className="App">
+        <Page1 handleNextDisabledChange={handleNextDisabledChange}
+          handleMadePurchaseChange={handleMadePurchaseChange}
+          setStatus={setStatus}
+        />
+      </div>
+    );
+  }  else if (page == 2) {
+    return (
+      <div className="App">
+        <Page2
+          handleNextDisabledChange={handleNextDisabledChange}
+          handleMadePurchaseChange={handleMadePurchaseChange}
+          madePurchase={madePurchase}
           setStatus={setStatus}
         />
       </div>
