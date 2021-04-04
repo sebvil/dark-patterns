@@ -4,7 +4,7 @@ import Phone from './phone.js';
 
 function Messenger(props) {
   // Declare a new state variable, which we'll call "count"
-  const { messengerColor } = props;
+  const { messengerColor, sender } = props;
   const style = {
     sendBar:  { 
       width: '260px', 
@@ -36,10 +36,11 @@ function Messenger(props) {
   return (
     <Phone>
       <div style={style.root}>
-        <Header color={messengerColor}>{props.page === 1 ? "person 1" : "person 2"}</Header>
+        <Header color={messengerColor}>{sender}</Header>
         <div style={{position: 'relative', height: '100%', padding: 0, margin: 0}}>
           <div style={style.bottom}>
           {props.children}
+          <p></p>
           <div style={style.sendBar}>
             <input style={style.input} type="text" placeholder={"Aa"} onClick={() => {}}/>
             <button style={style.sendButton}>Send</button>

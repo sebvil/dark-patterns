@@ -3,7 +3,14 @@ import React from 'react';
 
 
 export default function Message(props) {
-    const {is_received, sender, senderInitials, messengerColor} = props;
+    const {
+        is_received, 
+        sender,
+        senderInitials,
+        messengerColor,
+        to_send,
+        handleOnClick,
+    } = props;
     const styles = {
         root: {
             display: "flex",
@@ -29,12 +36,14 @@ export default function Message(props) {
             borderRadius: "5px",
             paddingRight: "8px",
             paddingLeft: "8px",
+            maxWidth: "200px",
+            textAlign: "left",
         },
         received: {
             background: messengerColor,
         },
         sent: {
-            background: "#565f6e",
+            background: !to_send ? "#565f6e" : "#8c95a3",
         }
     };
 
@@ -51,6 +60,7 @@ export default function Message(props) {
     } else {
         return (
             <div style={{...styles.root, alignSelf: 'flex-end'}}>
+                { to_send ? <button onClick={handleOnClick}>Select</button> : ""}
                 <div style={{...styles.sent, ...styles.message}}>
                     <p style={styles.sender}>{sender}</p>
                     {props.children}
