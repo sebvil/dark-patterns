@@ -9,6 +9,7 @@ function App() {
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
   const [page, setPage] = useState(1);
   const [nextDisabled, setNextDisabled] = useState(true);
+  const [status, setStatus] = useState("");
 
   const handleNextPressed = () => {
     setPage(page + 1);
@@ -19,6 +20,10 @@ function App() {
     setNextDisabled(false);
   }
 
+  const handleGoBack = () => {
+    setNextDisabled(true);
+  }
+
   const handleMadePurchaseChange = () => {
     setMadePurchase(!madePurchase);
   }
@@ -27,14 +32,28 @@ function App() {
     setMadePurchase(!madeInfluencerPurchase);
   }
 
-  return (
-    <div className="App">
-      <Page1 handleNextDisabledChange={handleNextDisabledChange}
-        handleMadePurchaseChange={handleMadePurchaseChange}
-      />
-      <button onClick={handleNextPressed} disabled={nextDisabled}>Next</button>
-    </div>
-  );
+
+  if (!nextDisabled) {
+    return (
+      <div>
+        <p>{status}</p>
+        <button onClick={handleNextPressed}>Next</button>
+        <button onClick={handleGoBack} disabled={nextDisabled}>Change your selection</button>
+
+      </div>
+    )
+  } else if (page == 1) {
+    return (
+      <div className="App">
+        <Page1 handleNextDisabledChange={handleNextDisabledChange}
+          handleMadePurchaseChange={handleMadePurchaseChange}
+          setStatus={setStatus}
+        />
+      </div>
+    );
+  }
+
+  
 }
 
 export default App;
