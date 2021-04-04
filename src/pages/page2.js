@@ -28,10 +28,6 @@ export default function Page1(props) {
             </div>
         )
     };
-    const description = "I've been needing a laptop for a while,\
-                     and I just found this promotion. It's still a lot of money \
-                     but I will save a great deal. But I do not have a lot of time to decide.\
-                     What should I do?";
 
     const onClickBuyNow = () => {
         props.handleMadePurchaseChange();
@@ -45,9 +41,25 @@ export default function Page1(props) {
 
     }
 
+    const description1 =   "It's been five minutes since I bought the laptop. I just\
+                            checked the page again, and look at that! The promotion is \
+                            still going on! I should have perhaps thought about this a bit \
+                            more...";
+
+    const description2 =   "It's been five minutes since I bought the laptop. I just\
+                            checked the page again, and look at that! I'm glad I did not buy it\
+                            before. I still need a laptop, so maybe I will buy it now...";
     
+    const getDescription = () => {
+        if (props.madePurchase) {
+            return description1;
+        } else {
+            return description2;
+        }
+    }
+                            
     return (
-        <Page description={description}>
+        <Page description={getDescription()}>
             <Store>
                 <Product
                     productName="Great laptop"
@@ -55,6 +67,7 @@ export default function Page1(props) {
                     image="https://cdn.mos.cms.futurecdn.net/X5TyA8uvkGXoNyjFzxcowS-970-80.jpg.webp"
                     alt="laptop"
                     price={price()}
+                    buyNowDisabled={props.madePurchase}
                     onClickBuyNow={onClickBuyNow}
                     onClickPass={onClickPass}/>
             </Store>
