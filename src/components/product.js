@@ -13,12 +13,21 @@ export default function Product(props) {
             alignItems: "flex-start",
             padding: "3px",
         },
-        button: {
+        bigButton: {
             border: "none",
             padding: "15px",
             borderRadius: "5px",
             width: "100%",
             marginTop: "5px",
+            background: "orange"
+        },
+        smallButton: {
+            border: "none",
+            width: "100%",
+            background: "none",
+            fontSize: '7pt',
+            color: "blue",
+            textDecoration: "underline"
 
         },
         image: {
@@ -28,12 +37,20 @@ export default function Product(props) {
     };
     return (
         <div style={styles.root}>
-            <button style={{...styles.button, background: "yellow"}}> Add to Cart</button>
-            <button style={{...styles.button, background: "orange"}}>Buy Now</button>
+            <button 
+                style={styles.bigButton}
+                onClick={props.onClickBuyNow}
+            > Buy Now
+            </button>
             <h2 style={{margin: "5px 0 0 0"}}>{productName}</h2>
             <p>{description}</p>
             <img style={styles.image} src={image} alt={alt} />
             {price}
+            <button 
+            style={styles.smallButton}
+            onClick={props.onClickPass}
+            >I'll pass. I don't like great deals.</button>
+
         </div>
     )
   }

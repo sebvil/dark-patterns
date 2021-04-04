@@ -8,7 +8,7 @@ function App() {
   const [madePurchase, setMadePurchase] = useState(false);
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
   const [page, setPage] = useState(1);
-  const [nextDisabled, setNextDisabled] = useState(false);
+  const [nextDisabled, setNextDisabled] = useState(true);
 
   const handleNextPressed = () => {
     setPage(page + 1);
@@ -29,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <Page1 handleNextChange={handleNextDisabledChange}/>
+      <Page1 handleNextDisabledChange={handleNextDisabledChange}
+        handleMadePurchaseChange={handleMadePurchaseChange}
+      />
       <button onClick={handleNextPressed} disabled={nextDisabled}>Next</button>
     </div>
   );
