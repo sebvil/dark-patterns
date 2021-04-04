@@ -9,7 +9,7 @@ function Header({ color, children }) {
       justifyContent: 'center',
       alignItems: 'baseline',
       padding: '1em',
-      marginBottom: '2em',
+      height: "50px",
       backgroundColor: color,
       color: '#fff',
     }}>
