@@ -12,10 +12,14 @@ function App() {
   const [messenger, setMessenger] = useState("social media");
   const [madePurchase, setMadePurchase] = useState(false);
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
-  const [page, setPage] = useState(1);
+  // i changed this
+  const [page, setPage] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(true);
   const [status, setStatus] = useState("");
 
+  const handleMoveToPageOne = () => {
+    setPage(page);
+  }
   const handleNextPressed = () => {
     setPage(page + 1);
     setNextDisabled(true);
@@ -47,7 +51,12 @@ function App() {
 
       </div>
     )
+<<<<<<< HEAD
   } else if (page == 0) {
+=======
+
+  } else if (page == 1) {
+>>>>>>> da46b969d7ec98a31463aab7dad2848d4fa6234e
     return (
       <div className="App">
         <Page1 handleNextDisabledChange={handleNextDisabledChange}
