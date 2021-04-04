@@ -30,7 +30,7 @@ export default function Product(props) {
         <div style={styles.root}>
             <button style={{...styles.button, background: "yellow"}}> Add to Cart</button>
             <button style={{...styles.button, background: "orange"}}>Buy Now</button>
-            <h2>{productName}</h2>
+            <h2 style={{margin: "5px 0 0 0"}}>{productName}</h2>
             <p>{description}</p>
             <img style={styles.image} src={image} alt={alt} />
             {price}
