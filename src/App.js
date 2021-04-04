@@ -7,9 +7,12 @@ function App() {
   const [messenger, setMessenger] = useState("social media");
   const [madePurchase, setMadePurchase] = useState(false);
   const [madeInfluencerPurchase, setMadeInfluencerPurchase] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const [nextDisabled, setNextDisabled] = useState(true);
 
+  const handleMoveToPageOne = () => {
+    setPage(page);
+  }
   const handleNextPressed = () => {
     setPage(page + 1);
     setNextDisabled(true);
