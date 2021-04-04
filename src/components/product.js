@@ -40,6 +40,7 @@ export default function Product(props) {
             <button 
                 style={styles.bigButton}
                 onClick={props.onClickBuyNow}
+                disabled={props.buyNowDisabled}
             > Buy Now
             </button>
             <h2 style={{margin: "5px 0 0 0"}}>{productName}</h2>

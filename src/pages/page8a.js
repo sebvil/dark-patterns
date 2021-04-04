@@ -6,15 +6,15 @@ import Post from "../components/post";
 import Product from "../components/product";
 import Page from "./page-layout";
 
-export default function Page6(props) {
+export default function Page8a(props) {
     return(
-        <Page description="">
+        <Page description="So much for privacy">
             <Social>
             <Post user="New City Times" profilePic={"https://snappygoat.com/b/0fffd1820d517215fb4fb9b526b0baa4d461130d"}>
-                   <p>Major recall of Snake Oil Tanning Products, Reported Cases of Users “Tanning to Death”</p>
+                   <p>WhatsYourMessage hacked! Data of over 500 million users leaked</p>
                 </Post>
-            <Post user="Marco Anaya" profilePic={"https://static.wikia.nocookie.net/disney/images/6/6f/Jar-Jar-Binks_profile.jpg"}>
-                    <p>Racket is by far the best programming language in existance. Anyone who disagrees is a supporter of the Empire.</p>
+            <Post user="Sebastian VM" profilePic={"https://upload.wikimedia.org/wikipedia/commons/9/96/SWC_6_-_Darth_Vader_Costume_%287865106344%29.jpg"}>
+                    <p>The Empire really gets a bad wrap imo... the jedi were def in the wrong 👀</p>
             </Post>
             </Social>
         </Page>
